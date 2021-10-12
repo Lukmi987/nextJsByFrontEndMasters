@@ -12,3 +12,11 @@ Next.js has adopted webpack 5 as the default for compilation. We've spent a lot 
 Prerendering:
 optimized by Next.js, and it was pre rendered ahead of time, The Html was created before it was sent to the server,
 so it is not loaded on the client, your React component was actually rendered on the server and sent down as HTMl
+
+Navigation:
+There Link component allows you to do client-side routing. This is important because 
+if you don't want that or are linking to another site, then you should just use an a tag instead.
+Link component
+<Link href="/settings">
+  <a>settings</a>
+</Link>

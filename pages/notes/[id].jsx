@@ -1,5 +1,9 @@
 import React from 'react'
-
-const  Page = () => <div>Note pager id [id].jsx</div>
+import { useRouter } from 'next/router';
+const  Page = () => {
+  const { query } = useRouter();
+  // id because it corresponds with name of file
+  return <div>Note pager id [].jsx {query.id}</div>
+}
 
 export default Page
