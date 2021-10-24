@@ -1,5 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
+import '../src/styles.module.css'
 
 // link href is different then in anchor tag, it is not url but name of the page
 const  Page = () => {
