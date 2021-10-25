@@ -20,3 +20,20 @@ Link component
 <Link href="/settings">
   <a>settings</a>
 </Link>
+
+Customizing Next.js config
+
+Plugins
+npm i next-env dotenv-load --dev
+
+
+Next, create a .env file on the root and add some envs.
+
+HELP_APP_URL=https://google.com
+⚠️   warning: don't check .env files into git
+
+Now, we'll use the env in our app. Go to the Nav component and add an a tag to link to the external app.
+href={process.env.HELP_APP_URL}
+
+Most plugins follow the withPluginName format. They also usually take your custom Next.js config, 
+if any, to ensure its returned and consumed by Next.js. This allows you to compose plugins:

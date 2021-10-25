@@ -14,7 +14,7 @@ const Nav = () => (
       <Link href="/notes">
         <a sx={{color: 'text', fontSize: 3, cursor: 'pointer'}}>notes</a>
       </Link>
-
+      <a sx={{fontWeight: 'bold', fontSize: 4, cursor: 'pointer'}} href={process.env.HELP_APP_URL}>help</a>
     </nav>
   </header>
 )
