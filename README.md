@@ -37,3 +37,28 @@ href={process.env.HELP_APP_URL}
 
 Most plugins follow the withPluginName format. They also usually take your custom Next.js config, 
 if any, to ensure its returned and consumed by Next.js. This allows you to compose plugins:
+
+====================================================================================================
+API Routes
+- it helps you start on the back-end  by just creating handlers
+- just create a folder named api inside pages, 
+- do not confuse api in pages with api in root, in the root they are serverless functions
+  Next.js API routes are not the same as Vercel's Serverless API functions, although the setup is similar.
+  
+API Handlers
+
+- bash command test : http PUT :3000/api
+
+We need to split our logic based on the methods (GET, PUT, DELETE, etc.). We also need some way to use connect-based middleware, 
+which would make building out these handlers much simpler.
+an excellent package that helps with this.: 
+ -// pages/api/data
+import nc from 'next-connect';
+import cors from 'cors'
+
+calling this in command line will create a note: 
+    echo '{"title": "this is the title"}' | http POST :3000/api/note
+    - echo will be the data: {title: jk,,} 
+- to delete a note:  http delete :300/api/notes/1635797292692
+                            update, ...
+  

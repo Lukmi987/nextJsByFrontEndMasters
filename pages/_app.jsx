@@ -5,7 +5,7 @@
 import { jsx } from 'theme-ui'
 import { ThemeProvider } from 'theme-ui'
 import theme from '../theme'
-import Nav from './src/components/nav';
+import Nav from '../src/components/nav';
 
 
 // Any global css must be in this file
